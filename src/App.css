@@ -1,0 +1,137 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #2f3841;
+}
+
+.weekly-to-do-list{
+    text-align: center;
+}
+
+.weekly-to-do-list h1{
+    display: inline-block; /* Verander van flex naar inline-block */
+    text-align: center; /* Zorgt ervoor dat de tekst in het midden blijft */
+    color: rgb(255, 255, 255);
+    font-size: 3rem;
+    padding: 10px; /* Voeg padding toe voor wat ruimte rondom de tekst */
+}
+
+.week {
+    display: flex;
+    flex-direction: column; /* Verticale layout voor twee rijen */
+    gap: 20px;
+    overflow-x: auto; /* Horizontale scroll toevoegen indien nodig */
+    padding: 10px;
+    max-width: 100%; /* Nooit breder dan de breedte van de viewport */
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.day-to-do-list {
+    border: 2px solid hsla(0, 0%, 80%, 0.719);
+    border-radius: 5px;
+    padding: 10px;
+    height: auto;
+    width: 400px; 
+    max-height: 300px; /* Maximale hoogte voor scrollen */
+    min-height: 300px;
+    overflow-y: auto; /* Verticale scroll toevoegen indien nodig */
+    scrollbar-width: none;
+}
+
+.day-to-do-list::-webkit-scrollbar {
+    display: none; /* Verberg de scrollbar voor WebKit browsers (zoals Chrome/Safari) */
+}
+
+.day-to-do-list h2 {
+    margin-top: 0;
+    font-size: 1.8rem;
+    text-align: center;
+    text-decoration: underline;
+    color: rgb(255, 255, 255);
+}
+
+.task-input {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.task-input input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-right: 10px;
+    
+}
+
+
+.task-list {
+    padding: 0;
+    list-style-type: none;
+    overflow-y: auto; /* Verticale scroll toevoegen indien nodig */
+    max-height: 280px; /* Maximale hoogte voor scrollen */
+    
+}
+
+.task-list li {
+    font-size: 1.2rem;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    background-color: hsla(0, 0%, 0%, 0.425);
+    margin-bottom: 8px; /* Extra ruimte tussen taken */
+    border-radius: 5px;
+}
+
+
+.text {
+    flex: 1;
+    max-width: 196px;
+    overflow-wrap: break-word; /* Tekst laten wrappen bij te lange woorden */
+    color: white;
+}
+
+button{
+    font-size: 0.78rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.5 ease;
+}
+
+.add-button{
+    background-color: hsl(125, 47%, 54%);
+}
+
+.add-button:hover{
+    background-color: hsl(125, 47%, 44%);
+}
+
+.delete-button{
+    background-color: hsl(10, 90%, 50%);
+    margin-right: 5px;
+}
+
+.delete-button:hover{
+    background-color: hsl(10, 90%, 40%);
+}
+
+.move-button{
+    background-color: hsl(207, 90%, 64%);
+    margin-right: 5px;
+}
+
+.move-button:hover{
+    background-color: hsl(207, 90%, 54%);
+}
+
+
+
